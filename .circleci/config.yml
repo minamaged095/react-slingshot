@@ -10,7 +10,7 @@ jobs:
       - image: cimg/base:stable
     steps:
       - checkout
-      - run: "apt install npm -y" 
+      - run: "sudo apt install npm -y" 
       - run: "npm run lint"
   test:
     docker:
