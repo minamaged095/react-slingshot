@@ -7,11 +7,11 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: cimg/base:stable
+      - image: cimg/node:stable
     steps:
       - checkout
-      - run: npm i
-      - run: "sudo apt install npm -y" 
+    #  - run: npm i
+     # - run: "sudo apt install npm -y" 
       - run: "npm run lint"
   test:
     docker:
