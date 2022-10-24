@@ -12,6 +12,7 @@ jobs:
       - checkout
       - run:
           name: "build"
+          command: "npm i"
           command: "npm run lint"
   test:
     docker:
@@ -20,6 +21,7 @@ jobs:
       - checkout
       - run:
           name: "test"
+          command: "npm i"
           command: "npm run test"
   analyze:
     docker:
@@ -28,6 +30,7 @@ jobs:
       - checkout
       - run:
           name: "analyze"
+          command: "npm i"
           command: "npm audit"
 workflows:
   first-pipeline:
