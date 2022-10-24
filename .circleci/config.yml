@@ -10,7 +10,7 @@ jobs:
       - image: cimg/node:18.11.0
     steps:
       - checkout
-    #  - run: npm i
+      - run: npm i
      # - run: "sudo apt install npm -y" 
       - run: "npm run lint"
   test:
