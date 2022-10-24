@@ -10,10 +10,7 @@ jobs:
       - image: cimg/base:stable
     steps:
       - checkout
-      - run:
-          name: "build"
-          command: "npm i"
-          command: "npm run lint"
+      - run: "npm i && npm run lint"
   test:
     docker:
       - image: cimg/base:stable
